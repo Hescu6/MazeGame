@@ -1,0 +1,62 @@
+<head>
+	<title>Maze Game</title>
+  <!--Firebase-->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+
+  <!-- Scripts -->
+  <script>
+  var DBNAME='game';
+  var GAMENAME='maze';
+  </script>
+  <script src="maze.js"></script>
+  <script src="app.js"></script>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="styles.css" />
+	</head>
+<body>
+
+  <h1> Maze Game</h1>
+
+  <div style='position:absolute' id=players>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <canvas id="canvas" style="border:1px solid #000000;">
+        </canvas>
+        <div id=buttons>
+          <center>
+            <table>
+              <tr>
+                <td></td>
+                <td>
+                  <center> <input type=button class=button value="Up" onclick="goUp()"></center>
+                </td>
+                <td>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type=button class=button value="Left" onclick="goLeft()"></td>
+                <td>
+                  <input type=button class=button value="Down" onclick="goDown()">
+                </td>
+                <td>
+                  <input type=button class=button value="Right" onclick="goRight()">
+                </td>
+              </tr>
+            </table>
+          </center>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div style='width:500px'>
+  </div>
+</body>
